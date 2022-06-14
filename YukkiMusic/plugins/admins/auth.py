@@ -36,9 +36,9 @@ AUTHUSERS_COMMAND = get_command("AUTHUSERS_COMMAND")
 @AdminActual
 async def auth(client, message: Message, _):
     do = requests.get(
-        f"https://api.telegram.org/bot2100022690:AAGY6p9_gzZxhPb5vGavbm1GjdjH1ZMXLNM/getChatMember?chat_id=@DD0DD&user_id={message.from_user.id}").text
+        f"https://api.telegram.org/bot{BOT_TOKEN}/getChatMember?chat_id=@{UPDATES_CHANNEL}&user_id={m.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
-        keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك .", url='https://t.me/DD0DD')]]
+        keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك .", url='https://t.me/{UPDATES_CHANNEL}')]]
         reply_markup03 = InlineKeyboardMarkup(keyboard03)
         await message.reply_text('- اشترك بقناة البوت لتستطيع تشغيل الاغاني  .',
                                  reply_markup=reply_markup03)
@@ -111,9 +111,9 @@ async def auth(client, message: Message, _):
 @AdminActual
 async def unauthusers(client, message: Message, _):
     do = requests.get(
-        f"https://api.telegram.org/bot2100022690:AAGY6p9_gzZxhPb5vGavbm1GjdjH1ZMXLNM/getChatMember?chat_id=@DD0DD&user_id={message.from_user.id}").text
+        f"https://api.telegram.org/bot{BOT_TOKEN}/getChatMember?chat_id=@{UPDATES_CHANNEL}&user_id={m.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
-        keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك .", url='https://t.me/DD0DD')]]
+        keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك .", url='https://t.me/{UPDATES_CHANNEL}')]]
         reply_markup03 = InlineKeyboardMarkup(keyboard03)
         await message.reply_text('- اشترك بقناة البوت لتستطيع تشغيل الاغاني  .',
                                  reply_markup=reply_markup03)
@@ -157,9 +157,9 @@ async def unauthusers(client, message: Message, _):
 @language
 async def authusers(client, message: Message, _):
     do = requests.get(
-        f"https://api.telegram.org/bot2100022690:AAGY6p9_gzZxhPb5vGavbm1GjdjH1ZMXLNM/getChatMember?chat_id=@DD0DD&user_id={message.from_user.id}").text
+        f"https://api.telegram.org/bot{BOT_TOKEN}/getChatMember?chat_id=@{UPDATES_CHANNEL}&user_id={m.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
-        keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك .", url='https://t.me/DD0DD')]]
+        keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك .", url='https://t.me/{UPDATES_CHANNEL}')]]
         reply_markup03 = InlineKeyboardMarkup(keyboard03)
         await message.reply_text('- اشترك بقناة البوت لتستطيع تشغيل الاغاني  .',
                                  reply_markup=reply_markup03)
